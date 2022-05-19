@@ -1,0 +1,27 @@
+{
+  "name": "cse-341-armada",
+  "version": "1.0.0",
+  "description": "BYU-I CSE-341 second project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js",
+    "start-gendoc": "node swagger.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AmyLila/cse-341-armada.git"
+  },
+  "author": "Amy Baker",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AmyLila/cse-341-armada/issues"
+  },
+  "homepage": "https://github.com/AmyLila/cse-341-armada#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  },
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
