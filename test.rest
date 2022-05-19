@@ -1,0 +1,81 @@
+
+// Get all contacts
+GET http://localhost:3000/contacts
+
+###
+
+GET https://amy-baker-cse-341.herokuapp.com/contacts
+
+###
+// Get Contacts by ID
+GET http://localhost:3000/contacts/626b5d49d8e61d43e6713268
+
+###
+
+GET https://amy-baker-cse-341.herokuapp.com/contacts/626b5cedd8e61d43e6713264
+
+
+#####
+// Add Contact
+POST http://localhost:3000/contacts HTTP/1.1
+Content-Type : application/json
+  
+  {
+      "firstName":"Davie",
+    "lastName":"Jones1",
+    "email":"bestCat@cat.com",
+    "favoriteColor":"Black",
+    "birthday":"2/22/2022"
+  }
+
+
+####
+POST https://amy-baker-cse-341.herokuapp.com/contacts HTTP/1.1
+Content-Type : application/json
+  
+  {
+      "firstName":"David",
+    "lastName":"Jones From Heroku",
+    "email":"bestCat@cat.com",
+    "favoriteColor":"Black",
+    "birthday":"2/22/2022"
+  }
+
+
+
+#####
+//Modify Contact
+PUT http://localhost:3000/contacts/627c73515c899b8c078a9b0e HTTP/1.1
+Content-Type:application/json
+
+  {
+      "firstName":"modified",
+    "lastName":"Contact",
+    "email":"bestCat@cat.com",
+    "favoriteColor":"Black",
+    "birthday":"2/22/2022"
+  }
+
+
+####  
+PUT https://amy-baker-cse-341.herokuapp.com/contacts/627478facaeb7d2e0458919a HTTP/1.1
+Content-Type:application/json
+
+  {
+      "firstName":"modified from Heroku",
+    "lastName":"Contact",
+    "email":"bestCat@cat.com",
+    "favoriteColor":"Black",
+    "birthday":"2/22/2022"
+  }
+
+
+####
+DELETE http://localhost:3000/contacts/6275a40a1f8dd6ed83cf1ca0 HTTP/1.1
+Content-Type:application/json
+
+####
+DELETE https://amy-baker-cse-341.herokuapp.com/contacts/62746f8fe9d708d2d8fcf652 HTTP/1.1
+Content-Type:application/json
+
+
