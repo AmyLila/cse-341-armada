@@ -12,7 +12,7 @@ const mongoConnection = () => {
     MongoClient.connect(process.env.DB_URI, (err, client) => {
         if (err) throw err;
         _client = client
-        _collection = client.db('contacts').collection('contacts');
+        _collection = client.db('project2').collection('users');
         console.log('Connected! from the connection file');
 
     });
