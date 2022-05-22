@@ -12,7 +12,7 @@ routes.get('/', (req, res) => {
     const resultsAll = connection.getCollection().find();
     resultsAll.toArray().then((documents) => {
         res.status(200).json(documents);
-        console.log('All Contacts! From the contacts file.')
+        console.log('All Contacts! From the users file.')
 
 
     });
