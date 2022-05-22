@@ -43,9 +43,7 @@ routes.post('/', (req, res) => {
     const newContact = {
         firstName: req.body.firstName,
         lastName: req.body.lastName,
-        email: req.body.email,
-        favoriteColor: req.body.favoriteColor,
-        birthday: req.body.birthday
+        email: req.body.email
   };
 
     const result = connection.getCollection().insertOne(newContact);
@@ -66,9 +64,7 @@ routes.put('/:id', (req, res) => {
   const contact = {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
-    email: req.body.email,
-    favoriteColor: req.body.favoriteColor,
-    birthday: req.body.birthday
+    email: req.body.email
   };
 
   const result = connection.getCollection().replaceOne({_id: contactId}, contact);
