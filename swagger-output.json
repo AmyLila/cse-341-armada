@@ -5,7 +5,7 @@
     "description": "Armada API",
     "version": "1.0.0"
   },
-  "host": "https://amy-baker-armada.herokuapp.com",
+  "host": "amy-baker-armada.herokuapp.com",
   "basePath": "/",
   "schemes": [
     "https"
