@@ -9,7 +9,7 @@ const doc = {
   // host: 'localhost:3000',
   // schemes: ['http'],
 
-  host: 'https://amy-baker-armada.herokuapp.com',
+  host: 'amy-baker-armada.herokuapp.com',
   schemes: ['https'],
 
   
