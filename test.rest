@@ -21,7 +21,7 @@ POST http://localhost:3000/users HTTP/1.1
 Content-Type : application/json
   
   {
-      "firstName":"Testing",
+      "firstName":"testing",
     "lastName":"Validation",
     "email":"bestCat@cat.com"
     
@@ -33,9 +33,9 @@ POST https://amy-baker-armada.herokuapp.com/users HTTP/1.1
 Content-Type : application/json
   
   {
-      "firstName":"David10",
-    "lastName":"Jones From Heroku",
-    "email":"bestCat@cat.com"
+      "firstName":"testing",
+    "lastName":"validation",
+    "email":""
   }
 
 

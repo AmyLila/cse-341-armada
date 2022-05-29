@@ -63,7 +63,6 @@ routes.post('/', userValidation,  (req, res) => {
       return res.status(400).json({errors: result.array()});
     }
     
-    
     connection.getCollection().insertOne(newContact)
     .then((documents) => {
       res.status(201).json(documents);
@@ -77,7 +76,7 @@ routes.post('/', userValidation,  (req, res) => {
 
 
 //Code to modify an existing contact by id
-routes.put('/:id', (req, res) => {
+routes.put('/:id', userValidation, (req, res) => {
   const contactId = new ObjectId(req.params.id);
   const contact = {
     firstName: req.body.firstName,
@@ -85,14 +84,14 @@ routes.put('/:id', (req, res) => {
     email: req.body.email
   };
 
-  const result = connection.getCollection().replaceOne({_id: contactId}, contact);
-  result.then((documents) => {
-    if(result){
+  const result = results(req);
+    if(!result.isEmpty()){
+      return res.status(400).json({errors: result.array()});
+    }
+    
+    connection.getCollection().replaceOne({_id: contactId}, contact)
+    .then((documents) => {
       res.status(202).json(documents);
-
-    }else {
-        res.status(500).json(response.error || 'An error occurred while modifying the user.');
-      }
     
 
   });
