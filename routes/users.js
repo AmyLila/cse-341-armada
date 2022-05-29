@@ -11,8 +11,14 @@ routes.get('/', (req, res) => {
 
     const resultsAll = connection.getCollection().find();
     resultsAll.toArray().then((documents) => {
+      if(resultsAll){
         res.status(200).json(documents);
         console.log('All Contacts! From the users file.')
+
+      }else {
+        res.status(500).json(response.error || 'Some error occurred while getting the users list.');
+      }
+        
 
 
     });
