@@ -22,7 +22,7 @@ Content-Type : application/json
   
   {
       "firstName":"Davie",
-    "lastName":"Jones1",
+    "lastName":"Jones10",
     "email":"bestCat@cat.com"
     
   }
@@ -33,7 +33,7 @@ POST https://amy-baker-armada.herokuapp.com/users HTTP/1.1
 Content-Type : application/json
   
   {
-      "firstName":"David",
+      "firstName":"David10",
     "lastName":"Jones From Heroku",
     "email":"bestCat@cat.com"
   }

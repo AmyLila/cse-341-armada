@@ -2,6 +2,7 @@ const routes = require('express').Router();
 const connection = require('../data/connection');
 const ObjectId = require('mongodb').ObjectId;
 const bodyParser = require('body-parser');
+const {userValidation, results} = require('../validation')
 routes.use(bodyParser.json());
 
 
@@ -49,7 +50,7 @@ routes.get('/:id', (req, res) => {
 
 
 //POST route to create a new user
-routes.post('/', (req, res) => {
+routes.post('/', userValidation,  (req, res) => {
     
     const newContact = {
         firstName: req.body.firstName,
