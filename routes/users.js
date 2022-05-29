@@ -60,12 +60,12 @@ routes.post('/', userValidation,  (req, res) => {
 
     const result = results(req);
     if(!result.isEmpty()){
-      return res.status(500).json(response.error || 'An error occurred while creating a new user.');
+      return res.status(400).json({errors: result.array()});
     }
     
     
-    connection.getCollection().insertOne(newContact);
-    result.then((documents) => {
+    connection.getCollection().insertOne(newContact)
+    .then((documents) => {
       res.status(201).json(documents);
       
 
