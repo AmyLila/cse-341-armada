@@ -16,10 +16,9 @@ routes.get('/', (req, res) => {
         console.log('All Contacts! From the users file.')
 
       }else {
-        res.status(500).json(response.error || 'Some error occurred while getting the users list.');
+        res.status(500).json(response.error || 'An error occurred while getting the users list.');
       }
         
-
 
     });
     
@@ -30,10 +29,16 @@ routes.get('/', (req, res) => {
 //Get contact by ID
 routes.get('/:id', (req, res) => {
     const contactId = new ObjectId(req.params.id);
-    const resultsAll = connection.getCollection().find({_id: contactId});
-    resultsAll.toArray().then((documents) => {
+    const resultsOne = connection.getCollection().find({_id: contactId});
+    resultsOne.toArray().then((documents) => {
+      if(resultsOne){
         res.status(200).json(documents[0]);
         console.log(`One Contact: ${req.params.id}! From the contacts file.`)
+      
+      }else {
+        res.status(500).json(response.error || 'An error occurred while getting one user.');
+      }
+        
 
 
     });
@@ -43,7 +48,7 @@ routes.get('/:id', (req, res) => {
 
 
 
-//POST route to create a new contact
+//POST route to create a new user
 routes.post('/', (req, res) => {
     
     const newContact = {
@@ -54,7 +59,13 @@ routes.post('/', (req, res) => {
 
     const result = connection.getCollection().insertOne(newContact);
     result.then((documents) => {
-      res.status(201).json(documents);
+      if(result){
+        res.status(201).json(documents);
+
+      }else {
+        res.status(500).json(response.error || 'An error occurred while creating a new user.');
+      }
+      
 
     });
     console.log(result);
@@ -75,7 +86,13 @@ routes.put('/:id', (req, res) => {
 
   const result = connection.getCollection().replaceOne({_id: contactId}, contact);
   result.then((documents) => {
-    res.status(202).json(documents);
+    if(result){
+      res.status(202).json(documents);
+
+    }else {
+        res.status(500).json(response.error || 'An error occurred while modifying the user.');
+      }
+    
 
   });
   
@@ -89,7 +106,13 @@ routes.delete('/:id', (req, res) => {
   const contactId = new ObjectId(req.params.id);
   const result = connection.getCollection().deleteOne({_id:contactId});
   result.then((documents) => {
-    res.status(202).json(documents);
+    if(result){
+      res.status(202).json(documents);
+
+    }else {
+        res.status(500).json(response.error || 'An error occurred while modifying the user.');
+      }
+    
 
   });
   console.log(result);
