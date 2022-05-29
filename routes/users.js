@@ -58,22 +58,22 @@ routes.post('/', userValidation,  (req, res) => {
         email: req.body.email
   };
 
-    const result = connection.getCollection().insertOne(newContact);
+    const result = results(req);
+    if(!result.isEmpty()){
+      return res.status(500).json(response.error || 'An error occurred while creating a new user.');
+    }
+    
+    
+    connection.getCollection().insertOne(newContact);
     result.then((documents) => {
-      if(result){
-        res.status(201).json(documents);
-
-      }else {
-        res.status(500).json(response.error || 'An error occurred while creating a new user.');
-      }
+      res.status(201).json(documents);
       
 
     });
     console.log(result);
 
 
-
-}); //End create new contact
+}); //End create new user
 
 
 //Code to modify an existing contact by id
