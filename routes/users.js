@@ -55,7 +55,8 @@ routes.post('/', userValidation,  (req, res) => {
     const newContact = {
         firstName: req.body.firstName,
         lastName: req.body.lastName,
-        email: req.body.email
+        email: req.body.email,
+        password: req.body.password
   };
 
     const result = results(req);
@@ -81,7 +82,8 @@ routes.put('/:id', userValidation, (req, res) => {
   const contact = {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
-    email: req.body.email
+    email: req.body.email,
+    password: req.body.password
   };
 
   const result = results(req);

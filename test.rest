@@ -23,7 +23,8 @@ Content-Type : application/json
   {
       "firstName":"testing",
     "lastName":"Validation",
-    "email":"bestCat@cat.com"
+    "email":"bestCat@cat.com",
+    "password":"12345"
     
   }
 
@@ -35,7 +36,8 @@ Content-Type : application/json
   {
       "firstName":"testing",
     "lastName":"validation",
-    "email":""
+    "email":"",
+    "password":"12345"
   }
 
 
@@ -47,8 +49,9 @@ Content-Type:application/json
 
   {
       "firstName":"modified",
-    "lastName":"Contact",
-    "email":"bestCat@cat.com"
+    "lastName":"testingValidation",
+    "email":"bestCat@cat.com",
+    "password":"12345"
   }
 
 
@@ -59,7 +62,8 @@ Content-Type:application/json
   {
       "firstName":"modified from Heroku",
     "lastName":"Contact",
-    "email":"bestCat@cat.com"
+    "email":"bestCat@cat.com",
+    "password":"12345"
   }
 
 
