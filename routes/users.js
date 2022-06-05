@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const {userValidation, results} = require('../validation');
 const mongoose = require('mongoose');
 const User = mongoose.model('User');
-const userController = require('../controllers/userController');
+const userController = require('../controlers/userController');
 routes.use(bodyParser.json());
 
 
@@ -53,29 +53,8 @@ routes.get('/:id', (req, res) => {
 
 
 //POST route to create a new user
-routes.post('/', userValidation,  (req, res) => {
-    
-    const newContact = {
-        firstName: req.body.firstName,
-        lastName: req.body.lastName,
-        email: req.body.email,
-        password: req.body.password
-  };
+routes.post('/', userController.createUser);
 
-    const result = results(req);
-    if(!result.isEmpty()){
-      return res.status(400).json({errors: result.array()});
-    }
-    
-    connection.getCollection().insertOne(newContact)
-    .then((documents) => {
-      res.status(201).json(documents);
-      
-
-    });
-    console.log(result);
-
-}); 
 //End create new user
 
 

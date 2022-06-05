@@ -21,7 +21,7 @@ POST http://localhost:3000/users HTTP/1.1
 Content-Type : application/json
   
   {
-      "firstName":"testing",
+      "firstName":"mongoose",
     "lastName":"Validation",
     "email":"bestCat@cat.com",
     "password":"12345"
@@ -34,7 +34,7 @@ POST https://amy-baker-armada.herokuapp.com/users HTTP/1.1
 Content-Type : application/json
   
   {
-      "firstName":"testing from heroku",
+      "firstName":"testing from heroku and mongoose",
     "lastName":"validation",
     "email":"bake@amy.com",
     "password":"12345"
