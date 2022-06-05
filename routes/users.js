@@ -3,6 +3,7 @@ const connection = require('../data/connection');
 const ObjectId = require('mongodb').ObjectId;
 const bodyParser = require('body-parser');
 const {userValidation, results} = require('../validation')
+const users = require('../models/users')
 routes.use(bodyParser.json());
 
 

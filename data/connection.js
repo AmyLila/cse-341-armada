@@ -2,6 +2,8 @@ const mongodb = require('mongodb');
 const MongoClient = mongodb.MongoClient;
 const mongoose = require('mongoose');
 require('dotenv').config();
+// require('../models/Armada')
+// require('../models/Users')
 
 let _client;
 let _collection;
@@ -16,7 +18,7 @@ const mongoConnection = () => {
 
 
 // MongoClient.connect(process.env.DB_URI, (err, client) => {
-//         if (err) throw err;
+//         
 //         _client = client
 //         _collection = client.db('project2').collection('users');
         

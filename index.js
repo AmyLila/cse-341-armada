@@ -3,6 +3,9 @@ const connection = require('./data/connection');
 const port = process.env.PORT || 3000;
 const app = express();
 const errorHandlers = require('./handlers/errorHandlers');
+require('./models/users')
+require('./models/armada')
+
 
 connection.mongoConnection();
 
