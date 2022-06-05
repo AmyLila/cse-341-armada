@@ -3,7 +3,7 @@ const MongoClient = mongodb.MongoClient;
 const mongoose = require('mongoose');
 require('dotenv').config();
 // require('../models/Armada')
-require(`../models/users`)
+
 
 
 let _client;

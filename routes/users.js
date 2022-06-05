@@ -2,6 +2,7 @@ const routes = require('express').Router();
 const connection = require('../data/connection');
 const ObjectId = require('mongodb').ObjectId;
 const bodyParser = require('body-parser');
+require(`../models/users`)
 const {userValidation, results} = require('../validation');
 const userController = require('../controlers/userController');
 routes.use(bodyParser.json());
