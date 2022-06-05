@@ -8,7 +8,7 @@ const errorHandlers = require('./handlers/errorHandlers');
 
 
 connection.mongoConnection();
-require('./models/users')
+// require('./models/users')
 
 app
 .use(express.json())
