@@ -5,6 +5,7 @@ require('dotenv').config();
 // require('../models/Armada')
 // require('../models/Users')
 
+
 let _client;
 let _collection;
 
@@ -41,7 +42,7 @@ const getCollection = () => {
     if  (_collection) {
         return _collection;
     }
-    throw 'No database found.'
+    throw 'No database found the get collection function is broken.'
 
 };
 

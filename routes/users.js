@@ -2,8 +2,10 @@ const routes = require('express').Router();
 const connection = require('../data/connection');
 const ObjectId = require('mongodb').ObjectId;
 const bodyParser = require('body-parser');
-const {userValidation, results} = require('../validation')
-const users = require('../models/users')
+const {userValidation, results} = require('../validation');
+const mongoose = require('mongoose');
+const User = mongoose.model('User');
+const userController = require('../controllers/userController');
 routes.use(bodyParser.json());
 
 
@@ -73,8 +75,8 @@ routes.post('/', userValidation,  (req, res) => {
     });
     console.log(result);
 
-
-}); //End create new user
+}); 
+//End create new user
 
 
 //Code to modify an existing contact by id
