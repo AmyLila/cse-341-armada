@@ -16,7 +16,7 @@ const armadaSchema = new mongoose.Schema({
         trim: true,
         required: 'Please enter a ship type.'
     },
-    connons: {
+    cannons: {
         type: Number,
         default: 1,
         min: 1,

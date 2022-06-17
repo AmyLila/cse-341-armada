@@ -6,11 +6,11 @@ const doc = {
     description: 'Armada API',
   },
 
-  // host: 'localhost:3000',
-  // schemes: ['http'],
+  host: 'localhost:3000',
+  schemes: ['http'],
 
-  host: 'amy-baker-armada.herokuapp.com',
-  schemes: ['https'],
+  // host: 'amy-baker-armada.herokuapp.com',
+  // schemes: ['https'],
 
   
 };

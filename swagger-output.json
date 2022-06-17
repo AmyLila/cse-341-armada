@@ -5,10 +5,10 @@
     "description": "Armada API",
     "version": "1.0.0"
   },
-  "host": "amy-baker-armada.herokuapp.com",
+  "host": "localhost:3000",
   "basePath": "/",
   "schemes": [
-    "https"
+    "http"
   ],
   "paths": {
     "/": {
@@ -24,7 +24,7 @@
     },
     "/users/": {
       "get": {
-        "description": "",
+        "description": "Get all users from the database",
         "parameters": [],
         "responses": {
           "200": {
@@ -33,7 +33,7 @@
         }
       },
       "post": {
-        "description": "",
+        "description": "Return a user by id from the database",
         "parameters": [
           {
             "name": "body",
@@ -113,7 +113,7 @@
         }
       },
       "delete": {
-        "description": "",
+        "description": "Delete a user from the database",
         "parameters": [
           {
             "name": "id",
