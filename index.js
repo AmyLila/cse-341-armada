@@ -33,8 +33,8 @@ app.get('/', (req, res) => {
 connection.mongoConnection();
 
 //Mongoose schemas
-require('./models/users')
-require('./models/armada')
+require('./model/users')
+require('./model/armada')
 
 
 app
