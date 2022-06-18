@@ -6,6 +6,7 @@ const app = express();
 const errorHandlers = require('./handlers/errorHandlers');
 require('dotenv').config();
 
+
 //AuthO example code
 const { auth } = require('express-openid-connect');
 
@@ -44,6 +45,6 @@ app
 
 
 app.listen(port, () => {
-  console.log(`Running on port ${port} from the server file`)
+  console.log(`Running on port ${port} from the index file`)
 
 });
