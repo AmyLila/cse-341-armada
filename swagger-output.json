@@ -5,11 +5,13 @@
     "description": "Armada API",
     "version": "1.0.0"
   },
-  "host": "localhost:3000",
+  
+  "host": "amy-baker-armada.herokuapp.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
+
   "paths": {
     "/": {
       "get": {
