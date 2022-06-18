@@ -6,7 +6,7 @@ require('dotenv').config();
 const mongoConnection = () => {
 
     mongoose.connect(process.env.DB_URI);
-    // mongoose.Promise = global.Promise;
+    mongoose.Promise = global.Promise;
        
 };
 
