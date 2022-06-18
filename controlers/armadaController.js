@@ -19,7 +19,7 @@ exports.createShip = (req,res) => {
 
 };
 
-// Get All Users
+// Get All Ships
 exports.getAllShips = async (req,res) => {
     const ships = await Armada.find();
 
@@ -34,7 +34,7 @@ exports.getAllShips = async (req,res) => {
 
 };
 
-// Get Users By Id
+// Get Ships By Id
 exports.getshipById = async (req,res) => {
     const userId = new ObjectId(req.params.id);
     const result = await Armada.find({_id: userId});

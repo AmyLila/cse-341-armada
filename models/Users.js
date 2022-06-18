@@ -2,6 +2,8 @@ const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 const bcrypt = require("bcryptjs")
 
+
+//User schema with polite error messages and validation
 const userSchema = new mongoose.Schema({
     firstName: {
         type: String,
@@ -17,6 +19,8 @@ const userSchema = new mongoose.Schema({
         type: String,
         trim: true,
         required: 'Please enter your email.'
+        
+   
     },
     password: {
         type: String,

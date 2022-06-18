@@ -1,5 +1,5 @@
 const express = require('express');
-const { default: mongoose } = require('mongoose');
+// const { default: mongoose } = require('mongoose');
 const connection = require('./data/connection');
 const port = process.env.PORT || 3000;
 const app = express();
@@ -27,13 +27,18 @@ app.get('/', (req, res) => {
 });
 //end AuthO example code
 
+
+//Connection to mongoDB
 connection.mongoConnection();
+
+//Mongoose schemas
 require('./models/users')
 require('./models/armada')
 
+
 app
 .use(express.json())
-.use('/', require('./routes'))
+.use('/', require('./routes'))// this might be my problem, how do I fix it?
 .use(errorHandlers.notFound);
 
 

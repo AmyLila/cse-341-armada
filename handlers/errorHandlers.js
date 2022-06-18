@@ -1,3 +1,4 @@
+//This is an error that is thrown if the wrong route is entered
 exports.notFound = (reg, res, next) => {
     const err = new Error('This Page Can Not Be Displayed');
     err.status = 404;

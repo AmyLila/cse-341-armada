@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const User = mongoose.model('User');
-// require('../models/users');
 const ObjectId = require('mongodb').ObjectId;
 
 
