@@ -30,10 +30,10 @@
         "parameters": [],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Successfully returned all users from the database"
           },
           "500": {
-            "description": "Internal Server Error"
+            "description": "There was a problem getting users from the databse"
           }
         }
       },
@@ -42,7 +42,7 @@
         "parameters": [],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Successfully added a new user to the database"
           }
         }
       }
@@ -60,15 +60,15 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Successfully returned a user from the database"
           },
           "500": {
-            "description": "Internal Server Error"
+            "description": "There was a problem returning the user information"
           }
         }
       },
       "put": {
-        "description": "",
+        "description": "Modify a user in the database by id",
         "parameters": [
           {
             "name": "id",
@@ -100,15 +100,15 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Successfully modified a users."
           },
           "500": {
-            "description": "Internal Server Error"
+            "description": "There was a problem modifing the user information"
           }
         }
       },
       "delete": {
-        "description": "",
+        "description": "Delete a user from the database by id",
         "parameters": [
           {
             "name": "id",
@@ -119,40 +119,40 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Successfully deleted a user from the database"
           },
           "500": {
-            "description": "Internal Server Error"
+            "description": "There was a problem deleting the user"
           }
         }
       }
     },
     "/armadas/": {
       "get": {
-        "description": "",
+        "description": "Retrieves all ships from the database",
         "parameters": [],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Successfully returned all ships"
           },
           "500": {
-            "description": "Internal Server Error"
+            "description": "There was a problem returning all the ships"
           }
         }
       },
       "post": {
-        "description": "",
+        "description": "Creates a new ship in the the database",
         "parameters": [],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Successfully created a new ship"
           }
         }
       }
     },
     "/armadas/{id}": {
       "get": {
-        "description": "",
+        "description": "Retrieves a ships from the database by id",
         "parameters": [
           {
             "name": "id",
@@ -163,15 +163,15 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Successfully returned a ship"
           },
           "500": {
-            "description": "Internal Server Error"
+            "description": "There was a problem returning the ship"
           }
         }
       },
       "put": {
-        "description": "",
+        "description": "Modifies a ship in the database by id",
         "parameters": [
           {
             "name": "id",
@@ -209,15 +209,15 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Successfully modified the ship"
           },
           "500": {
-            "description": "Internal Server Error"
+            "description": "There was a problem  modifying the ship"
           }
         }
       },
       "delete": {
-        "description": "",
+        "description": "Delete a ship from the database by id",
         "parameters": [
           {
             "name": "id",
@@ -228,10 +228,10 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Successfully deleted the ship"
           },
           "500": {
-            "description": "Internal Server Error"
+            "description": "There was a problem deleting the ship"
           }
         }
       }
@@ -245,11 +245,11 @@
     },
     "/profile/": {
       "get": {
-        "description": "",
+        "description": "Returns the user information when the user is logged in",
         "parameters": [],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Successfully returned user information"
           }
         }
       }
