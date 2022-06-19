@@ -48,16 +48,16 @@
               "type": "object",
               "properties": {
                 "firstName": {
-                  "example": "any"
+                  "example": "Geoffrey"
                 },
                 "lastName": {
-                  "example": "any"
+                  "example": "Chaucer"
                 },
                 "email": {
-                  "example": "any"
+                  "example": "example@email.com"
                 },
                 "password": {
-                  "example": "any"
+                  "example": "12345"
                 }
               }
             }
@@ -106,16 +106,16 @@
               "type": "object",
               "properties": {
                 "firstName": {
-                  "example": "any"
+                  "example": "William"
                 },
                 "lastName": {
-                  "example": "any"
+                  "example": "Shakespeare"
                 },
                 "email": {
-                  "example": "any"
+                  "example": "playwright@bard.com"
                 },
                 "password": {
-                  "example": "any"
+                  "example": "rose"
                 }
               }
             }
@@ -173,22 +173,22 @@
               "type": "object",
               "properties": {
                 "shipName": {
-                  "example": "any"
+                  "example": "H.M.S Basset"
                 },
                 "shipType": {
-                  "example": "any"
+                  "example": "Cutter"
                 },
                 "cannons": {
-                  "example": "any"
+                  "example": "12"
                 },
                 "sails": {
-                  "example": "any"
+                  "example": "24"
                 },
                 "crew": {
-                  "example": "any"
+                  "example": "12"
                 },
                 "damage": {
-                  "example": "any"
+                  "example": "0"
                 }
               }
             }
@@ -237,22 +237,22 @@
               "type": "object",
               "properties": {
                 "shipName": {
-                  "example": "any"
+                  "example": "H.M.S Gloria"
                 },
                 "shipType": {
-                  "example": "any"
+                  "example": "Schooner"
                 },
                 "cannons": {
-                  "example": "any"
+                  "example": "4"
                 },
                 "sails": {
-                  "example": "any"
+                  "example": "16"
                 },
                 "crew": {
-                  "example": "any"
+                  "example": "24"
                 },
                 "damage": {
-                  "example": "any"
+                  "example": "2"
                 }
               }
             }
