@@ -23,7 +23,7 @@ Content-Type : application/json
   {
       "firstName":"mongoose",
     "lastName":"Validation",
-    "email":"bestCat@cat.com",
+    "email":"best@Catcat.com",
     "password":"12345"
     
   }
@@ -56,7 +56,7 @@ Content-Type:application/json
 
 
 ####  
-PUT https://amy-baker-armada.herokuapp.com/users/629ba56528a08a0c1180f925 HTTP/1.1
+PUT https://amy-baker-armada.herokuapp.com/users/62ae7e059597cf646b9e4363 HTTP/1.1
 Content-Type:application/json
 
   {

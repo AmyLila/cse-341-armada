@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 const bcrypt = require("bcryptjs")
-
+var validator = require("validator");
 
 //User schema with polite error messages and validation
 const userSchema = new mongoose.Schema({
@@ -18,7 +18,9 @@ const userSchema = new mongoose.Schema({
     email: {
         type: String,
         trim: true,
-        required: 'Please enter your email.'
+        required: 'Please enter your email.',
+        validate: [validator.isEmail, "Please enter a valid E-mail!" ],
+        unique: [true, 'That email address is already is use']
         
    
     },
