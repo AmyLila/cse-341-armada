@@ -40,12 +40,7 @@
       "post": {
         "description": "Creates a new user in the the database",
         "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
+
           {
             "name": "body",
             "in": "body",
@@ -170,7 +165,35 @@
       },
       "post": {
         "description": "Creates a new ship in the the database",
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "shipName": {
+                  "example": "any"
+                },
+                "shipType": {
+                  "example": "any"
+                },
+                "cannons": {
+                  "example": "any"
+                },
+                "sails": {
+                  "example": "any"
+                },
+                "crew": {
+                  "example": "any"
+                },
+                "damage": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "Successfully created a new ship"
